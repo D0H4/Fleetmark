@@ -6,6 +6,8 @@ export interface Memo {
   id: number;
   title: string;
   text: string;
+  createdAt: number; // 생성 시간 (타임스탬프)
+  updatedAt: number; // 마지막 수정 시간 (타임스탬프)
 }
 
 function App() {
@@ -13,10 +15,13 @@ function App() {
 
   const addMemo = (text: string) => {
     if (text.trim() === "") return;
+    const now = Date.now();
     const newMemo: Memo = {
-      id: Date.now(),
+      id: now,
       title: `Memo ${memos.length + 1}`,
       text,
+      createdAt: now, // 처음 생성 시 현재 시간
+      updatedAt: now, // 처음 생성 시 동일한 값
     };
     setMemos([...memos, newMemo]);
   };
@@ -28,7 +33,9 @@ function App() {
   const updateMemo = (id: number, newTitle: string, newText: string) => {
     setMemos(
       memos.map((memo) =>
-        memo.id === id ? { ...memo, title: newTitle, text: newText } : memo
+        memo.id === id
+          ? { ...memo, title: newTitle, text: newText, updatedAt: Date.now() }
+          : memo
       )
     );
   };
