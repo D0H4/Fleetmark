@@ -9,7 +9,7 @@ Not sure about deployment—this was originally intended for self-hosting.
 # Todo
 - [ ] Fetch bookmarks from external sites
 - [ ] Summarize & recommend titles using AI
-- [ ] last vacation(?)
+- [ ] last vacation
 - [ ] Discharge
 
 ## Note
