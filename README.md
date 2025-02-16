@@ -1,7 +1,7 @@
 # Fleetmark
 Quick Memo + Bookmark WebApp
 
-![Sullyoon(NMIXX) is most beautiful woman in the world](image.png)
+![Sullyoon(NMIXX) is most beautiful woman in the world](README.png)
 
 ## Note
 Incomplete.  
