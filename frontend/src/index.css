@@ -368,3 +368,162 @@ body {
 .delete-cancel-button:hover {
   background: #666;
 }
+
+/* 📝 메모 카드 */
+.memo-card {
+  background: #16181c;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.memo-card:hover {
+  transform: scale(1.02);
+}
+
+/* 📖 메모 내용 (긴 내용 숨김) */
+.memo-text {
+  /*font-size: 14px;*/
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  max-height: 40px; /* 일정 높이 이상이면 숨김 */
+  padding: 10px;
+  margin: 0;
+}
+/* 🌙 노트 확장 모달 오버레이 */
+.note-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+/* 📜 노트 모달 창 */
+.note-modal-content {
+  background: #16181c;
+  padding: 20px;
+  border-radius: 12px;
+  width: 500px;
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🏷️ 노트 헤더 (제목 & 모드 토글 버튼) */
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+/* 제목 텍스트 */
+.note-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 제목 입력창 (Edit 모드) */
+.note-title-input {
+  width: 100%;
+  height: 40px;
+  background: #222;
+  border: 1px solid #555;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.note-title-input:focus {
+  border-color: #1d9bf0;
+}
+
+/* ✍ 모드 변경 버튼 */
+.mode-toggle-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.mode-toggle-button:hover {
+  color: #1d9bf0;
+}
+
+/* 📖 노트 내용 (View 모드) */
+.note-text {
+  font-size: 16px;
+  color: white;
+  white-space: pre-wrap;
+  /*padding: 10px;*/
+  cursor: grab;
+}
+
+/* 📝 내용 입력창 (Edit 모드) */
+.note-textarea {
+  width: 100%;
+  height: 200px;
+  background: #222;
+  border: 1px solid #555;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+
+.note-textarea:focus {
+  border-color: #1d9bf0;
+}
+
+/* 💾 저장 버튼 (Edit 모드에서만 표시) */
+.note-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #333;
+}
+
+.note-save-button {
+  background: #1d9bf0;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.note-save-button:hover {
+  background: #198ad4;
+}
+
+/* 📆 노트 생성 및 수정 날짜 표시 */
+.note-timestamps {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #888;
+  text-align: right;
+  border-top: 1px solid #333;
+  padding-top: 8px;
+}
